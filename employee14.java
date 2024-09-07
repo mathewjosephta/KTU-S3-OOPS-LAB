@@ -132,3 +132,39 @@ public class employee14 {
         scanner.close();
     }
 }
+
+//SAMPLE OUTPUT
+/* 
+Enter details for Officer:
+Name: John Doe
+Age: 35
+Phone Number: 123-456-7890
+Address: 123 Maple Street
+Salary: 50000
+Specialization: Software Engineering
+
+Enter details for Manager:
+Name: Jane Smith
+Age: 40
+Phone Number: 987-654-3210
+Address: 456 Oak Avenue
+Salary: 75000
+Department: Human Resources
+
+Officer Details:
+Name: John Doe
+Age: 35
+Phone Number: 123-456-7890
+Address: 123 Maple Street
+Specialization: Software Engineering
+Salary: $50000.0
+
+Manager Details:
+Name: Jane Smith
+Age: 40
+Phone Number: 987-654-3210
+Address: 456 Oak Avenue
+Department: Human Resources
+Salary: $75000.0
+
+ */
