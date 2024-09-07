@@ -49,3 +49,10 @@ public class shape15 {
         hexagon.numberOfSides();
     }
 }
+
+//SAMPLE OUTPUT
+/* 
+A rectangle has 4 sides.
+A triangle has 3 sides.
+A hexagon has 6 sides. 
+*/
