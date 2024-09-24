@@ -26,7 +26,7 @@ The programs in this repository demonstrate core OOPS concepts, including:
 ## How to Use
 1. Clone the repository:
     ```bash
-    git clone https://github.com/mathewjosephta/S3-OOPS-LAB.git
+    git clone https://github.com/mathewjosephta/KTU-S3-OOPS-LAB.git
     ```
 2. Navigate to the folder containing the desired program and run it using:
     ```bash
