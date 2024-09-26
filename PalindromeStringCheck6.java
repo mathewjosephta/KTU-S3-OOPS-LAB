@@ -22,7 +22,7 @@ public class PalindromeStringCheck6 {
         }
 
         // Checking if the original string and reversed string are the same
-        if (str.equals(reverseString)) {
+        if (str.equals(reverseString)) {  
             System.out.println(originalString + " is a palindrome.");
         } else {
             System.out.println(originalString + " is not a palindrome.");
@@ -32,6 +32,7 @@ public class PalindromeStringCheck6 {
         sc.close();
     }
 }
+
 
 //SAMPLE OUTPUT
 /*
