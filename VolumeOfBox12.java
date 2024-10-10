@@ -1,3 +1,7 @@
+//EXPERIMENT 12
+
+/* write a Java program that calculates the volume of a box using two methods: one to calculate the volume and another to display the volume */
+
 import java.util.Scanner;
 class Box {
     double width, height, depth;
@@ -43,3 +47,19 @@ public class BoxDemo {
         sc.close();
     }
 }
+
+//SAMPLE OUTPUT
+/*
+Enter the dimensions of myBox1 (width, height, depth): 
+10
+20
+15
+Enter the dimensions of myBox2 (width, height, depth): 
+5
+8
+12
+For myBox1:
+Volume of the box: 3000.0
+For myBox2:
+Volume of the box: 480.0
+*/
