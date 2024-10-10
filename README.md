@@ -25,6 +25,8 @@ The programs in this repository demonstrate core OOPS concepts, including:
 11. **Program 11**: Write a menu driven program to add or subtract two matrices
 12. **Program 12**: write a Java program that calculates the volume of a box
 13. **Program 13**: Write a Java program that reads the marks of 3 students using a constructor
+14.  **Program 14**: (Exercise to understand inheritance).
+15.   **Program 15**: (Exercise to understand polymorphism).
 
 ## How to Use
 1. Clone the repository:
