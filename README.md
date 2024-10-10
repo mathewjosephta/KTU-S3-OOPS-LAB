@@ -27,6 +27,8 @@ The programs in this repository demonstrate core OOPS concepts, including:
 13. **Program 13**: Write a Java program that reads the marks of 3 students using a constructor
 14.  **Program 14**: (Exercise to understand inheritance).
 15.   **Program 15**: (Exercise to understand polymorphism).
+16.   **Program 16** : Write a Java program that reads a line of integers, and then displays each integer, and the
+sum of all the integers (Use String Tokenizer class of java.util).
 
 ## How to Use
 1. Clone the repository:
