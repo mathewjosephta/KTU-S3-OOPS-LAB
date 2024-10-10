@@ -23,7 +23,8 @@ The programs in this repository demonstrate core OOPS concepts, including:
 9. **Program 9**: Write a java program find the transpose of a matrix
 10. **Program 10**: Write a Java program to multiply two matrices
 11. **Program 11**: Write a menu driven program to add or subtract two matrices
-12. **Program 12**: write a Java program that calculates the volume of a box 
+12. **Program 12**: write a Java program that calculates the volume of a box
+13. **Program 13**: Write a Java program that reads the marks of 3 students using a constructor
 
 ## How to Use
 1. Clone the repository:
