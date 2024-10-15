@@ -1,3 +1,7 @@
+//EXPERIMENT 18
+
+/* Write a file handling program in Java with reader/writer. */
+
 import java.io.*;
 import java.util.Scanner;
 
