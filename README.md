@@ -29,6 +29,12 @@ The programs in this repository demonstrate core OOPS concepts, including:
 15.   **Program 15**: (Exercise to understand polymorphism).
 16.   **Program 16** : Write a Java program that reads a line of integers, and then displays each integer, and the
 sum of all the integers (Use String Tokenizer class of java.util).
+17.   **Program 17** :
+18.   **Program 18** : Write a file handling program in Java with reader/writer.
+19.   **Program 19** : Write a Java program that read from a file and write to file by handling all file related ex-
+ceptions..
+
+
 
 ## How to Use
 1. Clone the repository:
