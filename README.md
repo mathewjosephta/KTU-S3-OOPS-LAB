@@ -1,4 +1,4 @@
-# S3-OOPS Lab Programs (KTU)
+# S3-OOPS Lab Programs (KTU 2019 SCHEME)
 
 This repository contains the Object-Oriented Programming (OOPS) lab programs for Semester 3, as per the KTU syllabus(2019 scheme). The programs are implemented in **Java** and cover various fundamental OOPS concepts.
 
