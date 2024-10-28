@@ -17,7 +17,7 @@ The programs in this repository demonstrate core OOPS concepts, including:
 3. **Program 3**: write a java program to print largest of three numbers
 4. **Program 4**: Write a Java program that prints the Fibonacci series up to a specified number of terms
 5. **Program 5**: Write a java program to check whether a 'NUMBER' is palindrome or not
-6. **Program 6**: write a java program to check whether a 'STRING' is palindrome or not
+6. **Program 6**: Write a Java program to demonstrate the use of garbage collector.
 7. **Program 7**: write a java program to check whether a number is armstrong or not
 8. **Program 8**: Write a Java Program to find the frequency of a given character in a string.
 9. **Program 9**: Write a java program find the transpose of a matrix
@@ -43,8 +43,8 @@ ceptions..
     ```
 2. Navigate to the folder containing the desired program and run it using:
     ```bash
-    javac ProgramName.java
-    java ProgramName
+    javac [ProgramName].java
+    java [ProgramName]
     ```
 
 ---
