@@ -1,4 +1,4 @@
-//EXPERIMENT 6
+//EXPERIMENT 1
 
 /* write a java program to check whether a STRING is palindrome or not */
 
