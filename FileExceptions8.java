@@ -1,4 +1,4 @@
-//Experiment : 19
+//Experiment : 9
 /*Write a Java program that read from a file and write to file by handling all file related ex-
 ceptions.*/
 
@@ -11,21 +11,20 @@ public class FileReadWrite {
         String outputFilePath = "output.txt";
 
         // Declare BufferedReader and BufferedWriter
-        BufferedReader bufferedReader = null;
-        BufferedWriter bufferedWriter = null;
+        BufferedReader br = null;
+        BufferedWriter bw = null;
 
         try {
             // Initialize BufferedReader with a FileReader pointing to the input file
-            bufferedReader = new BufferedReader(new FileReader(inputFilePath));
+            br = new BufferedReader(new FileReader(inputFilePath));
 
             // Initialize BufferedWriter with a FileWriter pointing to the output file
-            bufferedWriter = new BufferedWriter(new FileWriter(outputFilePath));
+            bw = new BufferedWriter(new FileWriter(outputFilePath));
 
             String line;
             // Read from the input file and write to the output file
-            while ((line = bufferedReader.readLine()) != null) {
-                bufferedWriter.write(line);
-                bufferedWriter.newLine(); // Write a new line after each line
+            while ((line = br.readLine()) != null) {
+                bw.write(line);
             }
 
             // Print success message
@@ -38,11 +37,11 @@ public class FileReadWrite {
         } finally {
             // Ensure resources are closed
             try {
-                if (bufferedReader != null) {
-                    bufferedReader.close();
+                if (br != null) {
+                    br.close();
                 }
-                if (bufferedWriter != null) {
-                    bufferedWriter.close();
+                if (bw != null) {
+                    bw.close();
                 }
             } catch (IOException e) {
                 // Handle exceptions that may occur while closing the resources
