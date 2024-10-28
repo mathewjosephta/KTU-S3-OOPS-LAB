@@ -1,14 +1,14 @@
-//EXPERIMENT 18
+//EXPERIMENT 7
 
 /* Write a file handling program in Java with reader/writer. */
 
 import java.io.*;
 import java.util.Scanner;
 
-public class FileHandlingMenu {
+public class FileHandlingMenu{
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int choice;
 
         while (true) {
@@ -17,25 +17,24 @@ public class FileHandlingMenu {
             System.out.println("1. Write to File");
             System.out.println("2. Read from File");
             System.out.println("3. Exit");
+            
             System.out.print("Enter your choice: ");
-            choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            choice = sc.nextInt();
 
             switch (choice) {
                 case 1:
                     // Case 1: Write to File
                     System.out.print("Enter the file name to write to: ");
-                    String writeFileName = scanner.nextLine();
+                    String writeFileName = sc.nextLine();
 
                     try {
                         FileWriter fw = new FileWriter(writeFileName, true); // Open in append mode
                         BufferedWriter bw = new BufferedWriter(fw);
 
                         System.out.println("Enter the text to write to the file:");
-                        String textToWrite = scanner.nextLine();
+                        String txt = sc.nextLine();
 
-                        bw.write(textToWrite);
-                        bw.newLine(); // Add new line after the text
+                        bw.write(txt);
                         bw.close();
                         fw.close();
                         System.out.println("Data has been written to the file.");
@@ -47,7 +46,7 @@ public class FileHandlingMenu {
                 case 2:
                     // Case 2: Read from File
                     System.out.print("Enter the file name to read from: ");
-                    String readFileName = scanner.nextLine();
+                    String readFileName = sc.nextLine();
 
                     try {
                         FileReader fr = new FileReader(readFileName);
@@ -71,8 +70,7 @@ public class FileHandlingMenu {
                 case 3:
                     // Case 3: Exit
                     System.out.println("Exiting...");
-                    scanner.close();
-                    System.exit(0);
+                    sc.close();
                     break;
 
                 default:
