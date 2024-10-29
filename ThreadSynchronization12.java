@@ -16,27 +16,27 @@ class Counter {
 }
 
 class IncrementThread extends Thread {
-    private Counter counter;
+    private Counter c;
 
-    public IncrementThread(Counter counter) {
-        this.counter = counter;
+    public IncrementThread(Counter c) {
+        this.c = c;
     }
 
     // Override the run method to define the thread's task
     public void run() {
         for (int i = 0; i < 1000; i++) {
-            counter.increment();
+            c.increment();
         }
     }
 }
 
 public class ThreadSynchronization {
     public static void main(String[] args) {
-        Counter counter = new Counter();
+        Counter c = new Counter();
 
         // Create two IncrementThread instances
-        IncrementThread thread1 = new IncrementThread(counter);
-        IncrementThread thread2 = new IncrementThread(counter);
+        IncrementThread thread1 = new IncrementThread(c);
+        IncrementThread thread2 = new IncrementThread(c);
 
         // Start the threads
         thread1.start();
@@ -51,7 +51,7 @@ public class ThreadSynchronization {
         }
 
         // Print the final count
-        System.out.println("Final count: " + counter.getCount());
+        System.out.println("Final count: " + c.getCount());
     }
 }
 
