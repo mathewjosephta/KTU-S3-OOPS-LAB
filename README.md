@@ -12,7 +12,7 @@ The programs in this repository demonstrate core OOPS concepts, including:
 - File Handling etc.
 
 ## Program List
-1. **Program 1**: Write a Java program that checks whether a given string is a palindrome or not. Ex: MALAYALAM is palindrome."
+1. **Program 1**: Write a Java program that checks whether a given string is a palindrome or not. Ex: MALAYALAM is palindrome. [Click Here!](https://github.com/mathewjosephta/KTU-S3-OOPS-LAB/blob/main/StringPalindrome1.java)
 
 2. **Program 2**: Write a Java Program to find the frequency of a given character in a string.
 
