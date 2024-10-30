@@ -1,10 +1,10 @@
-//EXPERIMENT 10
+//EXPERIMENT 3
 
 /*Write a Java program to multiply two matrices*/
 
 import java.util.Scanner;
 
-public class MatrixMultiplication10 {
+public class MatrixMultiplication3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
