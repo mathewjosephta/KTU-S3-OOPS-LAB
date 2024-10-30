@@ -46,22 +46,22 @@ The programs in this repository demonstrate core OOPS concepts, including:
 12. **Program 12**: Write a Java program that shows thread synchronization.[Click Here](https://github.com/mathewjosephta/KTU-S3-OOPS-LAB/blob/main/ThreadSynchronization12.java)
 
 13. **Program 13**: Write a Java program that works as a simple calculator. Arrange Buttons for digits and the + - * % operations properly. Add a text field to display the 
-                    result. Handle any possible exceptions like divide by zero. Use Java Swing.[Click Here]()
+                    result. Handle any possible exceptions like divide by zero. Use Java Swing.
 
 14.  **Program 14**: Write a Java program that simulates a traffic light. The program lets the user select one of three lights: red, yellow, or green. 
                      When a radio button is selected, the light is turned on, and only one light can be on at a time. No light is on when the program 
-                     starts.[Click Here]()
+                     starts.
 
-15.   **Program 15**: Write a Java program to display all records from a table using Java Database Connectivity (JDBC).[Click Here]()
+15.   **Program 15**: Write a Java program to display all records from a table using Java Database Connectivity (JDBC).
 
 16.   **Program 16** : Write a Java program for the following: **
                              1) Create a doubly linked list of elements.
                              2) Delete a given element from the above list.
-                             3) Display the contents of the list after deletion.[Click Here]()
+                             3) Display the contents of the list after deletion.
 
-17.   **Program 17** :Write a Java program that implements Quick sort algorithm for sorting a list of names in ascending order.[Click Here]()
+17.   **Program 17** :Write a Java program that implements Quick sort algorithm for sorting a list of names in ascending order.
 
-18.   **Program 18** : Write a Java program that implements the binary search algorithm.[Click Here]()
+18.   **Program 18** : Write a Java program that implements the binary search algorithm.
 
 
 ## How to Use
