@@ -1,4 +1,4 @@
-//EXPERIMENT 15
+//EXPERIMENT 5
 
 /* Write a java program to create an abstract class named Shape that contains an empty method named numberOfSides( ). 
 Provide three classes named Rectangle, Triangle and Hexagon such that each one of the classes extends the class Shape. 
