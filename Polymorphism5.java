@@ -36,7 +36,7 @@ class Hexagon extends Shape {
 }
 
 // Main class to test the implementation
-public class shape15 {
+public class Shape5 {
     public static void main(String[] args) {
         // Create instances of Rectangle, Triangle, and Hexagon
         Shape rectangle = new Rectangle();
