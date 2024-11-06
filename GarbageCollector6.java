@@ -1,20 +1,23 @@
 // Experiment 6
 /* Write a Java program to demonstrate the use of garbage collector. */
 
+import java.lang.ref.Cleaner;
+
 public class GarbageCollector6 {
-    
-    // A simple class with a finalize method
+
+    // A simple class using Cleaner instead of finalize
     static class DemoObject {
+        private static final Cleaner cleaner = Cleaner.create();
+        private final Cleaner.Cleanable cleanable;
+
         // Constructor
         DemoObject() {
             System.out.println("Object created");
+            // Registering a cleanup action to be called when the object is unreachable
+            cleanable = cleaner.register(this, () -> System.out.println("Object is being cleaned up"));
         }
 
-        // This method is called just before an object is garbage collected
-        @Override
-        protected void finalize() throws Throwable {
-            System.out.println("Object is being garbage collected");
-        }
+        // No finalize method needed
     }
 
     public static void main(String[] args) {
@@ -26,10 +29,10 @@ public class GarbageCollector6 {
         obj1 = null;
         obj2 = null;
 
-        // Requesting JVM to call garbage collector
+        // Suggesting garbage collection
         System.gc();
 
-        // Adding a delay to see the garbage collector output (not guaranteed)
+        // Adding a delay to see if the cleaner runs (not guaranteed)
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
