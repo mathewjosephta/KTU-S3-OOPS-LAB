@@ -10,43 +10,41 @@ public class FileExceptions8 {
         // Create a Scanner object to read user input
         Scanner scanner = new Scanner(System.in);
 
-        // Prompt user for input and output file paths
-        System.out.print("Enter the input file path: ");
-        String inputFilePath = scanner.nextLine();
+        // Prompt user for the output file path
         System.out.print("Enter the output file path: ");
         String outputFilePath = scanner.nextLine();
 
-        // Declare BufferedReader and BufferedWriter
-        BufferedReader br = null;
+        // Declare BufferedWriter
         BufferedWriter bw = null;
 
         try {
-            // Initialize BufferedReader with a FileReader pointing to the input file
-            br = new BufferedReader(new FileReader(inputFilePath));
-
             // Initialize BufferedWriter with a FileWriter pointing to the output file
             bw = new BufferedWriter(new FileWriter(outputFilePath));
 
-            String line;
-            // Read from the input file and write to the output file
-            while ((line = br.readLine()) != null) {
-                bw.write(line);
-                bw.newLine(); // Add a new line after writing each line
+            System.out.println("Enter text (type 'exit' to finish):");
+
+            String userInput;
+            // Read text input from user until they type "exit"
+            while (true) {
+                userInput = scanner.nextLine();
+                if (userInput.equalsIgnoreCase("exit")) {
+                    break; // Exit the loop if the user types "exit"
+                }
+                // Write the input to the output file
+                bw.write(userInput);
+                bw.newLine(); // Add a new line after writing each input
             }
 
             // Print success message
-            System.out.println("File read and write operation completed successfully.");
+            System.out.println("Text input saved to file successfully.");
 
         } catch (IOException e) {
-            // Handle input/output errors that may occur during writing or reading
+            // Handle input/output errors that may occur during writing
             System.out.println("Error: An I/O error occurred during file operations.");
             e.printStackTrace();
         } finally {
             // Ensure resources are closed
             try {
-                if (br != null) {
-                    br.close();
-                }
                 if (bw != null) {
                     bw.close();
                 }
@@ -61,6 +59,7 @@ public class FileExceptions8 {
         scanner.close();
     }
 }
+
 
 
 //SAMPLE OUTPUT
