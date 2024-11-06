@@ -1,7 +1,7 @@
 // Experiment 6
 /* Write a Java program to demonstrate the use of garbage collector. */
 
-public class GarbageCollectorDemo {
+public class GarbageCollector6 {
     
     // A simple class with a finalize method
     static class DemoObject {
