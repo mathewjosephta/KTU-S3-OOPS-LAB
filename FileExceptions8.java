@@ -11,7 +11,7 @@ public class FileExceptions8 {
         Scanner scanner = new Scanner(System.in);
 
         // Prompt user for the output file path
-        System.out.print("Enter the output file path: ");
+        System.out.print("Enter the output file path to save your text: ");
         String outputFilePath = scanner.nextLine();
 
         // Declare BufferedWriter
@@ -21,7 +21,7 @@ public class FileExceptions8 {
             // Initialize BufferedWriter with a FileWriter pointing to the output file
             bw = new BufferedWriter(new FileWriter(outputFilePath));
 
-            System.out.println("Enter text (type 'exit' to finish):");
+            System.out.println("Enter text to save to file (type 'exit' to finish):");
 
             String userInput;
             // Read text input from user until they type "exit"
@@ -43,13 +43,12 @@ public class FileExceptions8 {
             System.out.println("Error: An I/O error occurred during file operations.");
             e.printStackTrace();
         } finally {
-            // Ensure resources are closed
+            // Ensure BufferedWriter is closed
             try {
                 if (bw != null) {
                     bw.close();
                 }
             } catch (IOException e) {
-                // Handle exceptions that may occur while closing the resources
                 System.out.println("Error: Failed to close resources properly.");
                 e.printStackTrace();
             }
@@ -57,6 +56,25 @@ public class FileExceptions8 {
 
         // Close the scanner
         scanner.close();
+
+        // Reading the text from the output file
+        try {
+            // Create a new Scanner for reading the file
+            BufferedReader br = new BufferedReader(new FileReader(outputFilePath));
+            System.out.println("\nReading from the saved file:");
+
+            String line;
+            // Read and print the contents of the file
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+
+            // Close the BufferedReader
+            br.close();
+        } catch (IOException e) {
+            System.out.println("Error: An I/O error occurred while reading the file.");
+            e.printStackTrace();
+        }
     }
 }
 
