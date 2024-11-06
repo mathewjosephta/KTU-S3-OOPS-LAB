@@ -78,12 +78,19 @@ Enter the number of columns for the first matrix: 3
 Enter the number of rows for the second matrix: 3
 Enter the number of columns for the second matrix: 2
 Enter elements for the first matrix:
-1 2 3
-4 5 6
+1 
+2
+3
+4 
+5 
+6
 Enter elements for the second matrix:
-7 8
-9 10
-11 12
+7
+8
+9 
+10
+11 
+12
 
 Resultant Matrix after multiplication:
 58 64 
