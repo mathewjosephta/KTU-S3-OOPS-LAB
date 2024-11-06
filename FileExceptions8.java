@@ -3,12 +3,18 @@
 ceptions.*/
 
 import java.io.*;
+import java.util.Scanner;
 
 public class FileExceptions8 {
     public static void main(String[] args) {
-        // Initialize names of input and output files
-        String inputFilePath = "input.txt";
-        String outputFilePath = "output.txt";
+        // Create a Scanner object to read user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user for input and output file paths
+        System.out.print("Enter the input file path: ");
+        String inputFilePath = scanner.nextLine();
+        System.out.print("Enter the output file path: ");
+        String outputFilePath = scanner.nextLine();
 
         // Declare BufferedReader and BufferedWriter
         BufferedReader br = null;
@@ -25,6 +31,7 @@ public class FileExceptions8 {
             // Read from the input file and write to the output file
             while ((line = br.readLine()) != null) {
                 bw.write(line);
+                bw.newLine(); // Add a new line after writing each line
             }
 
             // Print success message
@@ -49,8 +56,12 @@ public class FileExceptions8 {
                 e.printStackTrace();
             }
         }
+
+        // Close the scanner
+        scanner.close();
     }
 }
+
 
 //SAMPLE OUTPUT
 /*
