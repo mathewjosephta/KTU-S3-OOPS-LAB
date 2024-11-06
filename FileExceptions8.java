@@ -4,7 +4,7 @@ ceptions.*/
 
 import java.io.*;
 
-public class FileReadWrite {
+public class FileExceptions8 {
     public static void main(String[] args) {
         // Initialize names of input and output files
         String inputFilePath = "input.txt";
