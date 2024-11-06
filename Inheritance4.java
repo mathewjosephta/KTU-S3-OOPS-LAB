@@ -78,7 +78,7 @@ class Manager extends Employee {
 }
 
 // Main class to test the implementation
-public class employee14 {
+public class Employee4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
