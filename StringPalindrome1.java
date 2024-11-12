@@ -14,11 +14,11 @@ public class StringPalindrome {
 
         // Convert the string to lowercase to ignore case sensitivity
         String str = originalString.toLowerCase();
-
+        int len = str.length();
         // Reversing the string
         String reverseString = "";
-        for (int i = str.length() - 1; i >= 0; i--) {
-            reverseString += str.charAt(i);
+        for (int i = len - 1; i >= 0; i--) {
+            reverseString =reverseString+str.charAt(i);
         }
 
         // Checking if the original string and reversed string are the same
