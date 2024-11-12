@@ -1,75 +1,54 @@
 //EXPERIMENT 12
 /*Write a Java program that shows thread synchronization.*/
-import java.util.Random;
-
-class Counter {
-    private int count = 0;
-
-    // Synchronized method to increment count
-    public synchronized void increment() {
-        count++;
-    }
-
-    // Synchronized method to get the current count
-    public synchronized int getCount() {
-        return count;
+class Table {
+    synchronized void printTable(int n) {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(n * i); // Corrected to n * i
+        }
     }
 }
 
-class IncrementThread extends Thread {
-    private Counter c;
-
-    public IncrementThread(Counter c) {
-        this.c = c;
+class MyThread1 extends Thread {
+    Table t;
+    MyThread1(Table t) {
+        this.t = t;
     }
-
-    // Override the run method to define the thread's task
     public void run() {
-        for (int i = 0; i < 1000; i++) {
-            c.increment();
-        }
+        t.printTable(5);
     }
 }
 
-public class ThreadSynchronization {
-    public static void main(String[] args) {
-        Counter c = new Counter();
-
-        // Create two IncrementThread instances
-        IncrementThread thread1 = new IncrementThread(c);
-        IncrementThread thread2 = new IncrementThread(c);
-
-        // Start the threads
-        thread1.start();
-        thread2.start();
-
-        try {
-            // Wait for both threads to finish
-            thread1.join();
-            thread2.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        // Generate a random number and check if it's even or odd
-        Random random = new Random();
-        int randomNumber = random.nextInt(100); // Generate a random number between 0 and 99
-        System.out.println("Generated random number: " + randomNumber);
-
-        // Check if the random number is even or odd
-        if (randomNumber % 2 == 0) {
-            System.out.println("The number is even.");
-        } else {
-            System.out.println("The number is odd.");
-        }
-
-        // Exit message
-        System.out.println("Exiting the program.");
+class MyThread2 extends Thread { // Corrected class name
+    Table t;
+    MyThread2(Table t) {
+        this.t = t;
+    }
+    public void run() {
+        t.printTable(100);
     }
 }
 
+class ThreadSynchronization {
+    public static void main(String args[]) {
+        Table obj = new Table();
+        MyThread1 t1 = new MyThread1(obj);
+        MyThread2 t2 = new MyThread2(obj);
+        t1.start();
+        t2.start();
+    }
+}
 
 //SAMPLE OUTPUT
 /*
-Final count: 2000
+5
+10
+15
+20
+25
+100
+200
+300
+400
+500
+
 */
