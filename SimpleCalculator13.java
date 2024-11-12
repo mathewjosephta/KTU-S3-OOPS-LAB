@@ -1,91 +1,160 @@
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
-public class SimpleCalculator extends JFrame implements ActionListener {
-    private JTextField display;
-    private double num1 = 0, num2 = 0;
-    private char operator;
+class SimpleCalculator implements ActionListener {
+    JFrame f;
+    JTextField t;
+    JButton b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, bdiv, bmul, bsub, badd, bdec, beq, bclr;
+    static double a = 0, b = 0, result = 0;
+    static int operator = 0;
 
-    public SimpleCalculator() {
-        // Set up the frame
-        setTitle("Calculator");
-        setSize(300, 400);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new BorderLayout());
+    SimpleCalculator() {
+        f = new JFrame("Calculator");
+        t = new JTextField();
+        b1 = new JButton("1");
+        b2 = new JButton("2");
+        b3 = new JButton("3");
+        b4 = new JButton("4");
+        b5 = new JButton("5");
+        b6 = new JButton("6");
+        b7 = new JButton("7");
+        b8 = new JButton("8");
+        b9 = new JButton("9");
+        b0 = new JButton("0");
+        bdiv = new JButton("/");
+        bmul = new JButton("*");
+        bsub = new JButton("-");
+        badd = new JButton("+");
+        bdec = new JButton(".");
+        beq = new JButton("=");
+        bclr = new JButton("Clear");
 
-        // Display field
-        display = new JTextField();
-        display.setEditable(false);
-        display.setHorizontalAlignment(JTextField.RIGHT);
-        add(display, BorderLayout.NORTH);
+        t.setBounds(30, 40, 280, 30);
+        b7.setBounds(40, 100, 50, 40);
+        b8.setBounds(110, 100, 50, 40);
+        b9.setBounds(180, 100, 50, 40);
+        bdiv.setBounds(250, 100, 50, 40);
 
-        // Panel for buttons
-        JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(4, 4, 5, 5));
+        b4.setBounds(40, 170, 50, 40);
+        b5.setBounds(110, 170, 50, 40);
+        b6.setBounds(180, 170, 50, 40);
+        bmul.setBounds(250, 170, 50, 40);
 
-        // Buttons for digits and operations
-        String[] buttons = {"7", "8", "9", "/",
-                            "4", "5", "6", "*",
-                            "1", "2", "3", "-",
-                            "0", "C", "=", "+"};
+        b1.setBounds(40, 240, 50, 40);
+        b2.setBounds(110, 240, 50, 40);
+        b3.setBounds(180, 240, 50, 40);
+        bsub.setBounds(250, 240, 50, 40);
 
-        for (String text : buttons) {
-            JButton button = new JButton(text);
-            button.addActionListener(this);
-            buttonPanel.add(button);
-        }
-        add(buttonPanel, BorderLayout.CENTER);
+        bdec.setBounds(40, 310, 50, 40);
+        b0.setBounds(110, 310, 50, 40);
+        beq.setBounds(180, 310, 50, 40);
+        badd.setBounds(250, 310, 50, 40);
+
+        bclr.setBounds(100, 380, 100, 40);
+
+        f.add(t);
+        f.add(b7);
+        f.add(b8);
+        f.add(b9);
+        f.add(bdiv);
+        f.add(b4);
+        f.add(b5);
+        f.add(b6);
+        f.add(bmul);
+        f.add(b1);
+        f.add(b2);
+        f.add(b3);
+        f.add(bsub);
+        f.add(bdec);
+        f.add(b0);
+        f.add(beq);
+        f.add(badd);
+        f.add(bclr);
+
+        f.setLayout(null);
+        f.setVisible(true);
+        f.setSize(350, 500);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setResizable(false);
+
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+        b3.addActionListener(this);
+        b4.addActionListener(this);
+        b5.addActionListener(this);
+        b6.addActionListener(this);
+        b7.addActionListener(this);
+        b8.addActionListener(this);
+        b9.addActionListener(this);
+        b0.addActionListener(this);
+        bdiv.addActionListener(this);
+        bmul.addActionListener(this);
+        bsub.addActionListener(this);
+        badd.addActionListener(this);
+        bdec.addActionListener(this);
+        beq.addActionListener(this);
+        bclr.addActionListener(this);
     }
 
-    @Override
     public void actionPerformed(ActionEvent e) {
-        String input = e.getActionCommand();
-
-        try {
-            switch (input) {
-                case "C":
-                    display.setText("");
-                    num1 = num2 = 0;
-                    operator = '\0';
-                    break;
-                case "=":
-                    num2 = Double.parseDouble(display.getText());
-                    display.setText(calculate(num1, num2, operator));
-                    break;
-                case "+": case "-": case "*": case "/":
-                    num1 = Double.parseDouble(display.getText());
-                    operator = input.charAt(0);
-                    display.setText("");
-                    break;
-                default:
-                    display.setText(display.getText() + input);
+        if (e.getSource() == b1)
+            t.setText(t.getText().concat("1"));
+        if (e.getSource() == b2)
+            t.setText(t.getText().concat("2"));
+        if (e.getSource() == b3)
+            t.setText(t.getText().concat("3"));
+        if (e.getSource() == b4)
+            t.setText(t.getText().concat("4"));
+        if (e.getSource() == b5)
+            t.setText(t.getText().concat("5"));
+        if (e.getSource() == b6)
+            t.setText(t.getText().concat("6"));
+        if (e.getSource() == b7)
+            t.setText(t.getText().concat("7"));
+        if (e.getSource() == b8)
+            t.setText(t.getText().concat("8"));
+        if (e.getSource() == b9)
+            t.setText(t.getText().concat("9"));
+        if (e.getSource() == b0)
+            t.setText(t.getText().concat("0"));
+        if (e.getSource() == bdec)
+            t.setText(t.getText().concat("."));
+        if (e.getSource() == badd) {
+            a = Double.parseDouble(t.getText());
+            operator = 1;
+            t.setText("");
+        }
+        if (e.getSource() == bsub) {
+            a = Double.parseDouble(t.getText());
+            operator = 2;
+            t.setText("");
+        }
+        if (e.getSource() == bmul) {
+            a = Double.parseDouble(t.getText());
+            operator = 3;
+            t.setText("");
+        }
+        if (e.getSource() == bdiv) {
+            a = Double.parseDouble(t.getText());
+            operator = 4;
+            t.setText("");
+        }
+        if (e.getSource() == beq) {
+            b = Double.parseDouble(t.getText());
+            switch (operator) {
+                case 1 -> result = a + b;
+                case 2 -> result = a - b;
+                case 3 -> result = a * b;
+                case 4 -> result = a / b;
+                default -> result = 0;
             }
-        } catch (Exception ex) {
-            display.setText("Error");
+            t.setText("" + result);
         }
-    }
-
-    private String calculate(double n1, double n2, char op) {
-        double result = 0;
-        switch (op) {
-            case '+': result = n1 + n2; break;
-            case '-': result = n1 - n2; break;
-            case '*': result = n1 * n2; break;
-            case '/': 
-                if (n2 == 0) return "Cannot divide by zero";
-                result = n1 / n2; 
-                break;
-        }
-        return String.valueOf(result);
+        if (e.getSource() == bclr)
+            t.setText("");
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            SimpleCalculator calculator = new SimpleCalculator();
-            calculator.setVisible(true);
-        });
+        new SimpleCalculator();
     }
 }
-
